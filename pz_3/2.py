@@ -4,7 +4,7 @@
 month = int(input('Введите номер месяца: '))
 if month == 2:
     days = 28
-elif month in [4, 6, 9, 11]:
+elif month == 4 or month == 6 or month == 9 or month == 11:
     days = 30
 else:
     days = 31
