@@ -16,4 +16,4 @@ while n <= 0:
             n = input('Введите значение N(N>0): ')
 for n in range(n, 2*n + 1):
     result = result + n**2
-print(result)
+print('Сумма: ', result)
