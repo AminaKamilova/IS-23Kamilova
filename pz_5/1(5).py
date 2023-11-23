@@ -16,4 +16,4 @@ while int != type(n):
 while n != 0:
     n = n - sum_of_digits(n)
     quantity = quantity + 1
-print("Ноль получитсяn через ", quantity, " действий/действия")
+print("Ноль получится через ", quantity, " действий/действия")
