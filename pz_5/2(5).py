@@ -4,9 +4,6 @@
 # одновременно входными и выходными).
 # Используя четыре вызова этой функции, найти минимальное и
 # максимальное из данных чисел А, В, С, D.
-from typing import Any
-
-
 def Minmax(x, y):
     if x > y:
         y, x = x, y
@@ -39,6 +36,6 @@ while int != type(d):
         d = input('Введите значение D: ')
 a, b = Minmax(a, b)
 c, d = Minmax(c, d)
-b, d = Minmax(a, d)
-a, c = Minmax(b, c)
+b, d = Minmax(b, d)
+a, c = Minmax(a, c)
 print('Максимальное число: ', d, ', минимальное число: ', a)
