@@ -2,4 +2,4 @@
 # символы, но расположенные в обратном порядке
 line = input('Введите строку: ')
 reversed_line = line[::-1]
-print(reversed_line)
+print("Итоговая строка: ", reversed_line)

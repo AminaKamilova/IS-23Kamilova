@@ -9,5 +9,4 @@ directory_name = os.path.basename(os.path.dirname(file_path))
 
 if directory_name == "":
     directory_name = "\\"
-
-print(directory_name)
+print("Вывод: ", directory_name)
