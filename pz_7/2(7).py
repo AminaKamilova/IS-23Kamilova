@@ -2,11 +2,21 @@
 # Выделить из этой строки название последнего каталога
 # (без символов «/»).
 # Если файл содержится в корневом каталоге, то вывести символ «\»
-import os
-
 file_path = input('Введите полное имя файла: ')
-directory_name = os.path.basename(os.path.dirname(file_path))
 
-if directory_name == "":
-    directory_name = "\\"
+# Находим последний разделитель каталогов
+index = file_path.rfind('\\')
+
+# Если не найдено, файл находится в корневом каталоге
+if index == -1:
+    directory_name = '\\'
+else:
+    # Находим предыдущий разделитель перед последним разделителем
+    index_prev = file_path.rfind('\\', 0, index)
+    if index_prev == -1:
+        directory_name = '\\'
+    else:
+        # Получаем название последнего каталога
+        directory_name = file_path[index_prev+1:index]
+
 print("Вывод: ", directory_name)
