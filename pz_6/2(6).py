@@ -23,5 +23,5 @@ for i in range(n):
 # Вычисление количества участков возрастания и убывания
 increasing_count, decreasing_count = count_monotone_intervals(a)
 print("Список: ", a)
-print(f"Количество участков возрастания: {increasing_count}")
-print(f"Количество участков убывания: {decreasing_count}")
+print("Количество участков возрастания: ", increasing_count)
+print("Количество участков убывания: ", decreasing_count)
