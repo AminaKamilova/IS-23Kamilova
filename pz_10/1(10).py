@@ -25,4 +25,8 @@ if 'ЮАР' not in reina_tour:
     print("Туры в ЮАР нельзя приобрести в турагенстве РейнаТур")
 if 'ЮАР' not in rainbow:
     print("Туры в ЮАР нельзя приобрести в турагенстве Радуга")
+<<<<<<< HEAD
 print("Третье задание: \nПолный список всех туров:\n", voyage | reina_tour | rainbow)
+=======
+print("Третье задание: Полный список всех туров: ", voyage | reina_tour | rainbow)
+>>>>>>> origin/master
