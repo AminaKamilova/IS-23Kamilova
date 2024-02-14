@@ -24,3 +24,4 @@ formatted_poem += "\nНазвание стихотворения: "
 formatted_poem += title
 with open("formatted_poem.txt", "w", encoding="utf-16") as file:
     file.write(formatted_poem)
+print("Готово! Можете заглянуть в файл")
