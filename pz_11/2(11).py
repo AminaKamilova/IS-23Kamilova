@@ -9,6 +9,7 @@ with open("text18-10.txt", "r", encoding="utf-16") as file:
     for char in text:
         if char.isupper():
             uppercase_count += 1
+print("Содержимое файла:")
 print(text)
 print("Количество букв в верхнем регистре:", uppercase_count)
 
