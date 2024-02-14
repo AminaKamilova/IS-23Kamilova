@@ -7,14 +7,12 @@
 # Элементы в обратном порядке:
 # Сумма элементов последней половины:
 sequence = [3, -5, 8, -2, 1, 0, -4, 6]
-# Количество элементов:
 num_elements = len(sequence)
 
 reverse_sequence = sequence[::-1]
 index = num_elements // 2
 sum_last_half = sum(sequence[index:])
 with open("new_file.txt", "w", encoding="utf-16") as file:
-    # Записываем данные в файл:
     file.write("Исходные данные: " + str(sequence) + "\n")
     file.write("Количество элементов: " + str(num_elements) + "\n")
     file.write("Элементы в обратном порядке: " + str(reverse_sequence) + "\n")
