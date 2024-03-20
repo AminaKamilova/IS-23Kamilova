@@ -1,5 +1,5 @@
 # 2. В матрице найти среднее арифметическое положительных элементов.
-matrix = [[1, -2, 3], [4, 5, -6], [7, -8, -9]]
+matrix = [[i*j for j in range(-1, 2)] for i in range(1, 4)]
 positive = [num for i in matrix for num in i if num > 0]
 average = sum(positive) / len(positive) if positive else "???"
 print("Матрица: ")
