@@ -17,7 +17,7 @@ with sq.connect('saper.db') as con:
     cur.executemany("INSERT INTO users VALUES(?, ?, ?, ?, ?)", info_users)
 
 with sq.connect('saper.db') as con:
-    cur = con.cursor()
-    cur.execute("SELECT * FROM users")
+    cur = con.cursor("SELECT * FROM data_users WHERE score BETWEEN 500")
+    cur.execute("SELECT * FROM data_users")
     result = cur.fetchall()
     print(result)
