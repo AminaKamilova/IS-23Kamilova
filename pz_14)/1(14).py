@@ -3,7 +3,7 @@
 import re
 with open('Dostoevsky.txt', 'r', encoding="utf-8") as file:
         file_1 = file.read()
-        initials_pattern = r'\b[А-Я]\.\s[А-Я]\.\s[А-Я][а-я]+\b'
+        initials_pattern = r'\b[А-ЯЁ]\.\s[А-ЯЁ]\.\s[А-ЯЁ][а-яё]+\b'
         initials = re.findall(initials_pattern, file_1)
         print("Фамилии с инициалами в тексте:")
 for i in initials:
