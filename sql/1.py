@@ -1,5 +1,5 @@
 import sqlite3 as sq
-from data_users import info_users
+from pz_15.data_users import info_users
 
 with sq.connect('saper.db') as con:
     cur = con.cursor()
@@ -11,13 +11,7 @@ with sq.connect('saper.db') as con:
     old INTEGER,
     score INTEGER
     )""")
-# cur.execute("INSERT INTO users VALUES (1, 'Алексей', 1, 22, 1000)")
+cur.execute("INSERT INTO users VALUES (1, 'Алексей', 1, 22, 1000)")
 with sq.connect('saper.db') as con:
     cur = con.cursor()
     cur.executemany("INSERT INTO users VALUES(?, ?, ?, ?, ?)", info_users)
-
-with sq.connect('saper.db') as con:
-    cur = con.cursor("SELECT * FROM data_users WHERE score BETWEEN 500")
-    cur.execute("SELECT * FROM data_users")
-    result = cur.fetchall()
-    print(result)
