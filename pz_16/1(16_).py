@@ -33,7 +33,6 @@ class Building:
     def __str__(self):
         return f"Адрес: {self.address}, Количество этажей: {self.number_of_floors}"
 
-# Создание экземпляров класса
 building1 = Building(input("Введите адрес №1: "), input("Введите количество этажей: "))
 building2 = Building(input("Введите адрес №2: "), input("Введите количество этажей: "))
 building3 = Building(input("Введите адрес №3: "), input("Введите количество этажей: "))
