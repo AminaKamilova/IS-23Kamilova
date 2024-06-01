@@ -10,14 +10,10 @@
 import pickle
 
 def save_def(filename, *objects, ):
-    # Сохраняем объекты в файл в бинарном формате
-
     with open(filename, "wb") as f:
         pickle.dump(objects, f)
 
 def load_def(filename):
-    # Загружаем объекты из файла в бинарном формате
-
     with open(filename, "rb") as f:
         return pickle.load(f)
 
