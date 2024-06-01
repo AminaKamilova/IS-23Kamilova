@@ -7,19 +7,26 @@
 # затем максимальную из сумм элементов таких троек.
 # В данной задаче под тройкой подразумевается три идущих
 # подряд элемента последовательности.
-
-with open('313_17.txt') as sequence:
-    numbers_from_file = [int(num) for num in sequence.readlines()]
-max_ending_15 = max(numbers_from_file[i:i+3] for i in range(0, len(numbers_from_file), 3) if numbers_from_file[i] % 10 == 1 and numbers_from_file[i+1] % 10 == 5)
-max_ending_15 = max(max_ending_15)
+max_ending_15 = 0
 count = 0
 max_sum = 0
-for i in range(1, len(numbers_from_file)-1):
-    if (numbers_from_file[i] > 999) ^ (numbers_from_file[i-1] > 999) ^ (numbers_from_file[i+1] > 999):
-        sum3 = numbers_from_file[i-1] + numbers_from_file[i] + numbers_from_file[i+1]
-        if sum3 >= max_ending_15:
+
+with open('313_17.txt') as sequence:
+    numbers = [int(num) for num in sequence.readlines()]
+
+for i in range(len(numbers)):
+    if numbers[i] % 100 == 15:
+        max_ending_15 = max(max_ending_15, numbers[i])
+
+for i in range(len(numbers) - 2):
+    four_digits = 0
+    for j in range(i, i + 3):
+        if 999 < numbers[j] < 10000:
+            four_digits += 1
+    if four_digits == 1:
+        sum_3 = numbers[i] + numbers[i + 1] + numbers[i + 2]
+        if sum_3 >= max_ending_15:
             count += 1
-            max_sum = max(max_sum, sum3)
+            max_sum = max(max_sum, sum_3)
 
 print("Количество найденных троек чисел:", count, "\n" "Максимальная из сумм элементов таких троек:", max_sum)
-
