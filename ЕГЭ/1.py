@@ -8,7 +8,7 @@
 # В данной задаче под тройкой подразумевается три идущих
 # подряд элемента последовательности.
 
-with open('ttt.txt') as sequence:
+with open('313_17.txt') as sequence:
     numbers_from_file = [int(num) for num in sequence.readlines()]
 max_ending_15 = max(numbers_from_file[i:i+3] for i in range(0, len(numbers_from_file), 3) if numbers_from_file[i] % 10 == 1 and numbers_from_file[i+1] % 10 == 5)
 max_ending_15 = max(max_ending_15)
