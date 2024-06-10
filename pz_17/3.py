@@ -25,8 +25,8 @@ for dirpath, dirnames, filenames in os.walk("."):
 # os.replace("pz_6/file1(6).py", "test/file1(6).py")
 # os.replace("pz_6/file2(6).py", "test/file2(6).py")
 #
-# os.replace("C:/Users/89615/OneDrive/Документы/оаип гит/pz_7/file1(7).py", "test/test1/file1(7).py")
-# os.rename("test/test1/file1(7).py", "test/test1/test.txt")
+# os.replace("C:/Users/89615/OneDrive/Документы/оаип гит/pz_7/file1(7).py", "C:/Users/89615/OneDrive/Документы/оаип гит/test/test1/file1(7).py")
+# os.rename("C:/Users/89615/OneDrive/Документы/оаип гит/test/test1/file1(7).py", "C:/Users/89615/OneDrive/Документы/оаип гит/test/test1/test.txt")
 
 print("Размер файлов в папкe test:")
 for filename in os.listdir("C:/Users/89615/OneDrive/Документы/оаип гит/test"):
