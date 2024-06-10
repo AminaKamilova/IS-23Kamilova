@@ -1,0 +1,2 @@
+# jhjhjhj
+print(0)
