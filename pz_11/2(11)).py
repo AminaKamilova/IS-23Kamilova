@@ -13,7 +13,6 @@ print("Содержимое файла:")
 print(text)
 print("Количество букв в верхнем регистре:", uppercase_count)
 
-# Открываю файл снова, чтобы добавить автора и название
 with open("text18-10.txt", "r", encoding="utf-16") as file:
     poem_lines = file.readlines()
 formatted_poem = '\n'.join(poem_lines)
